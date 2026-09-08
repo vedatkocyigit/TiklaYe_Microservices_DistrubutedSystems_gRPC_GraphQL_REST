@@ -1,38 +1,45 @@
-package com.tiklaye.auth.domain;
+package com.tiklaye.user.domain;
 
-import com.tiklaye.common.security.Role;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "address")
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false, unique = true)
-    private String email;
+    @Column(name = "user_id", nullable = false)
+    private UUID userId;
 
-    @Column(name = "password_hash", nullable = false)
-    private String passwordHash;
-
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role;
+    private String label;
+
+    @Column(nullable = false)
+    private String city;
+
+    private String district;
+
+    @Column(name = "full_address", nullable = false)
+    private String fullAddress;
+
+    private BigDecimal latitude;
+
+    private BigDecimal longitude;
+
+    @Column(name = "is_default", nullable = false)
+    private boolean isDefault;
 
     @Column(name = "created_at", nullable = false)
     private Instant createdAt;

@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://localhost:5434/${USER_DB_NAME:user_db}
+    username: ${USER_DB_USER:user_user}
+    password: ${USER_DB_PASSWORD:user_pass}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  flyway:
+    enabled: true
+
+jwt:
+  secret: ${JWT_SECRET:7wxk4fGHymzwjCSTb5aViJvTI87Smk6qDDtakrcMcbgp5TJRZ+gUMtm5N5Hxp9lp}
+  access-token-expiration-ms: 900000
+  refresh-token-expiration-ms: 604800000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
