@@ -1,0 +1,5 @@
+version: "3.9"
+
+networks:
+  tiklaye-network:
+    driver: bridge
