@@ -1,5 +1,6 @@
 package com.tiklaye.auth.domain;
 
+import com.tiklaye.common.security.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

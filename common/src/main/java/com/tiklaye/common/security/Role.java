@@ -1,4 +1,4 @@
-package com.tiklaye.auth.domain;
+package com.tiklaye.common.security;
 
 public enum Role {
     CUSTOMER,

@@ -1,4 +1,4 @@
-package com.tiklaye.auth.security;
+package com.tiklaye.common.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,13 +1,13 @@
 package com.tiklaye.auth.service;
 
-import com.tiklaye.auth.domain.Role;
+import com.tiklaye.common.security.Role;
 import com.tiklaye.auth.domain.User;
 import com.tiklaye.auth.dto.LoginRequest;
 import com.tiklaye.auth.dto.LoginResponse;
 import com.tiklaye.auth.dto.RegisterRequest;
 import com.tiklaye.auth.dto.RegisterResponse;
 import com.tiklaye.auth.repository.UserRepository;
-import com.tiklaye.auth.security.JwtService;
+import com.tiklaye.common.security.JwtService;
 import com.tiklaye.common.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
